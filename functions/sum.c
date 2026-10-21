@@ -20,7 +20,7 @@ int main()
 }
 
 //user defined function for input 
-    void input(int num[], int length)
+void input(int num[], int length)
 {
     for (int  i = 0; i < length; i++)
     {
@@ -29,8 +29,8 @@ int main()
     }
 }
 
-    //user defined function for output 
-    void output(int num[], int length)
+//user defined function for output 
+void output(int num[], int length)
 {
     for (int i = 0; i < length; i++)
     {
