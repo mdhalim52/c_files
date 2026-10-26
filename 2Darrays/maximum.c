@@ -15,8 +15,7 @@ int main()
     int a[n][m];
     input(n, m, a);
 
-    int largest = maximum_value(n, m, a);
-    printf("Maximum value: %d", largest);
+    maximum_value(n, m, a);
     printf("\n");
     return 0;
 }
@@ -40,6 +39,8 @@ int input(int rows, int cols, int arr[rows][cols])
 int maximum_value(int rows, int cols, int arr[rows][cols])
 {   
     int max = INT_MIN;
+    int max_row = 0;
+    int max_col = 0;
     for (int  i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -47,12 +48,17 @@ int maximum_value(int rows, int cols, int arr[rows][cols])
             if (max < arr[i][j])
             {
                 max = arr[i][j];
+
+                max_row = i;
+                max_col = j;
             }
             
         }
         printf("\n");
           
     }
+
+    printf("maximum value is arr[%d][%d]: %d", max_row, max_col, max);
 
     return max;
     
